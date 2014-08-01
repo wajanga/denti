@@ -1,0 +1,89 @@
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:stretchColumns="0,1"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/app_name"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/btnLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0">
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/imageButton1"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_necta" />
+            <TextView
+                android:id="@+id/tvNecta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageButton1"
+                android:layout_centerHorizontal="true"
+                android:text="@string/necta"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvNecta2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvNecta"
+                android:layout_centerHorizontal="true"
+                android:text="@string/baraza_la_mitihani"
+                android:textSize="13dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1">
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/imageButton2"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_heslb" />
+            <TextView
+                android:id="@+id/tvHeslb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/imageButton2"
+                android:text="@string/heslb"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvHeslb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvHeslb"
+                android:layout_centerHorizontal="true"
+                android:text="@string/bodi_ya_mikopo"
+                android:textSize="13dp"/>
+        </RelativeLayout>
+    </TableRow>
+</TableLayout>
