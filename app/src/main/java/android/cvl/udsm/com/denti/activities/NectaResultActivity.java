@@ -2,6 +2,7 @@ package android.cvl.udsm.com.denti.activities;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.cvl.udsm.com.denti.fragments.NectaResultFragment;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,7 +13,9 @@ public class NectaResultActivity extends SingleFragmentActivity {
 
     @Override
     protected Fragment createFragment() {
-        return new NectaResultFragment();
+        //return new NectaResultFragment();
+        String studentNumber = getIntent().getStringExtra("studentNumber");
+        return NectaResultFragment.newInstance(getIntent().getStringExtra("studentNumber"));
     }
 
     @Override

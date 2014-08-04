@@ -98,20 +98,20 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Loan Amount Details"/>
+            android:text="Loan Percentage"/>
 
         <View
             android:id="@+id/divider3"
             android:layout_below="@id/tvLoanAmtDetails"
             style="@style/Divider" />
 
-        <TextView
-            android:id="@+id/tvPercentage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/chartLoan"
+            android:layout_width="wrap_content"
             android:padding="10dp"
-            android:layout_below="@id/divider3"
-            android:text="Percentage"/>
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/divider3"/>
 
     </RelativeLayout>
 

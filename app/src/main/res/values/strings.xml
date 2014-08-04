@@ -26,7 +26,9 @@
     <string name="result_upcase">RESULT</string>
     <string name="division">Division: I</string>
     <string name="points">Points: 8</string>
-    <string name="details">Details</string>
+    <string name="details">DETAILS</string>
     <string name="test">Test</string>
+    <string name="empty_result">No result</string>
+    <string name="student_number_cannot_be_empty">Student number cannot be empty</string>
 
 </resources>

@@ -12,10 +12,14 @@ import android.view.ViewGroup;
 
 import android.cvl.udsm.com.denti.R;
 import android.widget.Button;
+import android.widget.EditText;
+
+import com.andreabaccega.widget.FormEditText;
 
 public class NectaFragment extends Fragment {
 
     Button mShowButton;
+    FormEditText mStudentNumberEdittext;
 
     public NectaFragment() {
         // Required empty public constructor
@@ -27,11 +31,18 @@ public class NectaFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_necta, container, false);
 
+        mStudentNumberEdittext = (FormEditText) v.findViewById(R.id.etStudentNumber);
+
         mShowButton = (Button) v.findViewById(R.id.button);
         mShowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                startActivity(new Intent(getActivity(), NectaResultActivity.class));
+                if (mStudentNumberEdittext.testValidity()) {
+                    String mStudentNumber = mStudentNumberEdittext.getText().toString();
+                    Intent intent = new Intent(getActivity(), NectaResultActivity.class);
+                    intent.putExtra("studentNumber", mStudentNumber);
+                    startActivity(intent);
+                }
             }
         });
 
