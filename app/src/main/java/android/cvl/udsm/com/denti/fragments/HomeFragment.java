@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.cvl.udsm.com.denti.activities.HeslbActivity;
 import android.cvl.udsm.com.denti.activities.NectaActivity;
+import android.graphics.drawable.ClipDrawable;
+import android.graphics.drawable.LayerDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -13,6 +15,8 @@ import android.view.ViewGroup;
 
 import android.cvl.udsm.com.denti.R;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 

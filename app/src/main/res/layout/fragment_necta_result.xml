@@ -47,6 +47,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <TextView
+            android:id="@+id/tvDivisionResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/divider"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="I"/>
+
+        <TextView
             android:id="@+id/tvPoints"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,12 +65,24 @@
             android:text="@string/points"
             android:textAppearance="?android:attr/textAppearanceLarge"/>
 
+        <TextView
+            android:id="@+id/tvPointsResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tvDivision"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="8"/>
+
     </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/container2"
         android:layout_width="match_parent"
-        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:orientation="vertical"
         android:layout_weight="1"
         android:background="@drawable/bg_card"

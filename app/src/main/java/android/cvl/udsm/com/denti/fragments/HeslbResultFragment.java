@@ -64,9 +64,6 @@ public class HeslbResultFragment extends Fragment {
 
         mChart.setData(generateLessData());
 
-        Legend l = mChart.getLegend();
-        l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
-
         return v;
     }
 

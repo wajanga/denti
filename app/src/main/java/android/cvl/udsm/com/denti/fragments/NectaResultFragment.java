@@ -63,11 +63,11 @@ public class NectaResultFragment extends Fragment {
             emptyTextView.setVisibility(View.VISIBLE);
         }
         else {
-            TextView divisionTextView = (TextView) view.findViewById(R.id.tvDivision);
-            divisionTextView.setText("Division: " + result.getDivision());
+            TextView divisionTextView = (TextView) view.findViewById(R.id.tvDivisionResult);
+            divisionTextView.setText(result.getDivision());
 
-            TextView pointsTextView = (TextView) view.findViewById(R.id.tvPoints);
-            pointsTextView.setText("Points: " + result.getPoints());
+            TextView pointsTextView = (TextView) view.findViewById(R.id.tvPointsResult);
+            pointsTextView.setText(result.getPoints());
 
             NectaResultCellAdapter adapter = new NectaResultCellAdapter(getActivity());
             adapter.updateResultList(result.getResults());

@@ -24,11 +24,13 @@
     <string name="title_activity_necta_result">Matokeo</string>
     <string name="title_activity_heslb_result">Mkopo</string>
     <string name="result_upcase">RESULT</string>
-    <string name="division">Division: I</string>
-    <string name="points">Points: 8</string>
+    <string name="division">Division:</string>
+    <string name="points">Points:</string>
     <string name="details">DETAILS</string>
     <string name="test">Test</string>
     <string name="empty_result">No result</string>
     <string name="student_number_cannot_be_empty">Student number cannot be empty</string>
+    <string name="action_payers">Payers</string>
+    <string name="action_applicants">Applicants</string>
 
 </resources>

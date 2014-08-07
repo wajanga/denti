@@ -34,6 +34,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/show"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_button"
         android:layout_margin="50dp"
         android:id="@+id/button" />
 </LinearLayout>
