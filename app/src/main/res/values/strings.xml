@@ -32,5 +32,9 @@
     <string name="student_number_cannot_be_empty">Student number cannot be empty</string>
     <string name="action_payers">Payers</string>
     <string name="action_applicants">Applicants</string>
+    <string name="title_activity_necta_activity2">NectaActivity2</string>
+    <string name="title_activity_temp">Temp</string>
+    <string name="search_title">Search</string>
+    <string name="search_hint">Search</string>
 
 </resources>

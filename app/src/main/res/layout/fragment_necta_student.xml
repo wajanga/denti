@@ -4,18 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fragments.NectaFragment">
-
-
-    <!-- <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/etStudentNumber"
-        android:hint="@string/student_number"
-        android:gravity="center"
-        android:layout_margin="50dp" /> -->
+    tools:context=".fragments.NectaStudentFragment">
 
     <com.andreabaccega.widget.FormEditText
         whatever:testType="nocheck"
@@ -36,6 +25,8 @@
         android:text="@string/show"
         android:textColor="@color/white"
         android:background="@drawable/bg_button"
-        android:layout_margin="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
         android:id="@+id/button" />
 </LinearLayout>

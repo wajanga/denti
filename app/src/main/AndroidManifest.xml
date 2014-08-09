@@ -10,7 +10,7 @@
         <activity
             android:name=".activities.HomeActivity"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.Light.NoTitleBar">
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,10 +28,19 @@
         <activity
             android:name=".activities.NectaResultActivity"
             android:label="@string/title_activity_necta_result" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activities.HeslbResultActivity"
             android:label="@string/title_activity_heslb_result" >
+        </activity>
+        <activity
+            android:name=".activities.NectaActivity2"
+            android:label="@string/title_activity_necta_activity2" >
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
         </activity>
     </application>
 

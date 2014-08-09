@@ -1,9 +1,7 @@
 package android.cvl.udsm.com.denti.activities;
 
-import android.app.Activity;
 import android.app.Fragment;
-import android.cvl.udsm.com.denti.fragments.NectaFragment;
-import android.os.Bundle;
+import android.cvl.udsm.com.denti.fragments.NectaStudentFragment;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.cvl.udsm.com.denti.R;
@@ -12,7 +10,7 @@ public class NectaActivity extends SingleFragmentActivity {
 
     @Override
     protected Fragment createFragment() {
-        return new NectaFragment();
+        return new NectaStudentFragment();
     }
 
     @Override

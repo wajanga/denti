@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.cvl.udsm.com.denti.activities.HeslbActivity;
 import android.cvl.udsm.com.denti.activities.NectaActivity;
+import android.cvl.udsm.com.denti.activities.NectaActivity2;
 import android.graphics.drawable.ClipDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.net.Uri;
@@ -34,7 +35,7 @@ public class HomeFragment extends Fragment {
         mNectaImgButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                startActivity(new Intent(getActivity(), NectaActivity.class));
+                startActivity(new Intent(getActivity(), NectaActivity2.class));
             }
         });
 
