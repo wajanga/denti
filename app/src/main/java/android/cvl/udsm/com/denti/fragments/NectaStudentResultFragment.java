@@ -21,17 +21,17 @@ import android.widget.TextView;
  * A simple {@link Fragment} subclass.
  *
  */
-public class NectaResultFragment extends Fragment {
+public class NectaStudentResultFragment extends Fragment {
 
     private String studentNumber;
     private NectaResult result;
 
-    public NectaResultFragment() {
+    public NectaStudentResultFragment() {
         // Required empty public constructor
     }
 
-    public static NectaResultFragment newInstance(String studentNumber) {
-        NectaResultFragment nectaResultFragment = new NectaResultFragment();
+    public static NectaStudentResultFragment newInstance(String studentNumber) {
+        NectaStudentResultFragment nectaResultFragment = new NectaStudentResultFragment();
         Bundle args = new Bundle();
         args.putString("studentNumber", studentNumber);
         nectaResultFragment.setArguments(args);
@@ -50,7 +50,7 @@ public class NectaResultFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_necta_result, container, false);
+        View view =  inflater.inflate(R.layout.fragment_necta_student_result, container, false);
 
         if (result == null) {
             RelativeLayout container1 = (RelativeLayout) view.findViewById(R.id.container1);

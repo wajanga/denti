@@ -2,22 +2,40 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10dp">
+    android:layout_height="wrap_content"
+    style="@style/ListItem">
 
     <TextView
         android:id="@+id/tvSchoolName"
+        android:layout_width="230dp"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        style="@style/ListTextBold"
+        android:ellipsize="end"
+        android:text="Jangwani Secondary School"/>
+
+    <TextView
+        android:id="@+id/tvSchoolNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:textSize="15dp"
-        android:text="Jangwani Secondary School"/>
+        style="@style/ListText"
+        android:layout_below="@id/tvSchoolName"
+        android:text="Center number: S001"/>
+
+    <TextView
+        android:id="@+id/tvSchoolRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/ListTextSmall"
+        android:layout_below="@id/tvSchoolNumber"
+        android:text="Rank: 1"/>
 
     <TextView
         android:id="@+id/tvSchoolPassRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        style="@style/ListTextStyled"
+        android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         android:text="100%"/>
 

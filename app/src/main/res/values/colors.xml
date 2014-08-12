@@ -5,4 +5,5 @@
     <color name="white">#fff</color>
     <color name="black">#000</color>
     <color name="green">#009900</color>
+    <color name="dark_blue_theme">#2f6699</color>
 </resources>

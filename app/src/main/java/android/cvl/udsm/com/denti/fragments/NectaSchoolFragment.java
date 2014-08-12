@@ -39,8 +39,6 @@ public class NectaSchoolFragment extends Fragment implements AbsListView.OnItemC
 
         mAdapter = new NectaSchoolResultAdapter(getActivity());
         mAdapter.updateSchools(SampleSchools.SCHOOLS);
-
-        setHasOptionsMenu(true);
     }
 
     @Override
@@ -75,19 +73,6 @@ public class NectaSchoolFragment extends Fragment implements AbsListView.OnItemC
     public void onDetach() {
         super.onDetach();
         mListener = null;
-    }
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        getActivity().getMenuInflater().inflate(R.menu.necta_school_fragment, menu);
-
-        // Associate searchable configuration with the SearchView
-        SearchManager searchManager =
-                (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView =
-                (SearchView) menu.findItem(R.id.search).getActionView();
-        searchView.setSearchableInfo(
-                searchManager.getSearchableInfo(getActivity().getComponentName()));
     }
 
     @Override

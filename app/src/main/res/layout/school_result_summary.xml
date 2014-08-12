@@ -1,0 +1,165 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+    <TextView
+        android:id="@+id/tvResultSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black"
+        android:text="Result Summary"/>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_below="@id/tvResultSummary"
+        style="@style/Divider" />
+
+    <TextView
+        android:id="@+id/tvCandidates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/divider2"
+        android:text="No. of candidates:"/>
+
+    <TextView
+        android:id="@+id/tvCandidatesResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/divider2"
+        android:layout_alignParentRight="true"
+        android:text="50"/>
+
+    <TextView
+        android:id="@+id/tvPassRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/tvCandidates"
+        android:text="Pass rate:"/>
+
+    <TextView
+        android:id="@+id/tvPassRateResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvCandidates"
+        android:text="100%"/>
+
+
+    <TextView
+        android:id="@+id/tvRank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/tvPassRate"
+        android:text="Rank:"/>
+
+    <TextView
+        android:id="@+id/tvRankResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvPassRate"
+        android:text="1"/>
+
+    <TextView
+        android:id="@+id/tvDiv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/tvRank"
+        android:text="Division I:"/>
+
+    <TextView
+        android:id="@+id/tvDiv1Result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvRank"
+        android:text="10"/>
+
+    <TextView
+        android:id="@+id/tvDiv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/tvDiv1"
+        android:text="Division II:"/>
+
+    <TextView
+        android:id="@+id/tvDiv2Result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvDiv1"
+        android:text="10"/>
+
+    <TextView
+        android:id="@+id/tvDiv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/tvDiv2"
+        android:text="Division III:"/>
+
+    <TextView
+        android:id="@+id/tvDiv3Result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvDiv2"
+        android:text="10"/>
+
+    <TextView
+        android:id="@+id/tvDiv4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/tvDiv3"
+        android:text="Division IV:"/>
+
+    <TextView
+        android:id="@+id/tvDiv4Result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvDiv3"
+        android:text="10"/>
+
+    <TextView
+        android:id="@+id/tvDiv0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/tvDiv4"
+        android:text="Division 0:"/>
+
+    <TextView
+        android:id="@+id/tvDiv0Result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvDiv4"
+        android:text="10"/>
+
+</RelativeLayout>
+
+</merge>

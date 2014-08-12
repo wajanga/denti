@@ -1,0 +1,77 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_card"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvSchoolDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="School Details"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_below="@id/tvSchoolDetails"
+        style="@style/Divider" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@+id/divider"
+        android:text="Name:"/>
+
+    <TextView
+        android:id="@+id/tvNameResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/divider"
+        android:text="Kantalamba Secondary School"/>
+
+    <TextView
+        android:id="@+id/tvCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@+id/tvName"
+        android:text="Code:"/>
+
+    <TextView
+        android:id="@+id/tvCodeResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvName"
+        android:text="S0123"/>
+
+    <TextView
+        android:id="@+id/tvRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@+id/tvCode"
+        android:text="Region:"/>
+
+    <TextView
+        android:id="@+id/tvRegionResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvCode"
+        android:text="Morogoro"/>
+
+</RelativeLayout>
+
+</merge>

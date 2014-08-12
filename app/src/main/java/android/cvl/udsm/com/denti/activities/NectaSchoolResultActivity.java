@@ -2,26 +2,23 @@ package android.cvl.udsm.com.denti.activities;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.cvl.udsm.com.denti.fragments.NectaResultFragment;
+import android.cvl.udsm.com.denti.fragments.NectaSchoolResultFragment;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.cvl.udsm.com.denti.R;
 
-public class NectaResultActivity extends SingleFragmentActivity {
+public class NectaSchoolResultActivity extends SingleFragmentActivity {
 
     @Override
     protected Fragment createFragment() {
-        //return new NectaResultFragment();
-        String studentNumber = getIntent().getStringExtra("studentNumber");
-        return NectaResultFragment.newInstance(getIntent().getStringExtra("studentNumber"));
+        return new NectaSchoolResultFragment();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.necta_result, menu);
+        getMenuInflater().inflate(R.menu.necta_school_result, menu);
         return true;
     }
 

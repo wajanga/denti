@@ -19,9 +19,9 @@ public class SampleSchools {
 
     static {
         // Add 3 sample items.
-        addItem(new School("1", "Kantalamba Secondary School", 1, "100%", 100, 20, 20, 20, 40, 0));
-        addItem(new School("2", "Azania Secondary School", 2, "80%", 200, 10, 10, 40, 70, 70));
-        addItem(new School("3", "Marian Girls Secondary School", 3, "70%", 150, 8, 2, 90, 25, 25));
+        addItem(new School("S0106", "Kantalamba Secondary School", 1, "100%", 100, 20, 20, 20, 40, 0));
+        addItem(new School("S1234", "Azania Secondary School", 2, "80%", 200, 10, 10, 40, 70, 70));
+        addItem(new School("S0775", "Marian Girls Secondary School", 3, "70%", 150, 8, 2, 90, 25, 25));
     }
 
     private static void addItem(School school) {
