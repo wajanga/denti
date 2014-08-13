@@ -36,6 +36,6 @@
     <string name="title_activity_temp">Temp</string>
     <string name="search_title">Search</string>
     <string name="search_school_hint">Search School</string>
-    <string name="title_activity_necta_school_result">NectaSchoolResultActivity</string>
+    <string name="title_activity_necta_school_result">School Result</string>
 
 </resources>

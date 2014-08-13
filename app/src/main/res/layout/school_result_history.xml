@@ -2,20 +2,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="300dp"
         android:background="@drawable/bg_card"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginRight="10dp"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/tvResultHistory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            style="@style/TextViewBold"
             android:text="School Result History"/>
 
         <View
@@ -26,7 +24,6 @@
         <com.github.mikephil.charting.charts.LineChart
             android:id="@+id/chartResultHistory"
             android:layout_width="wrap_content"
-            android:padding="10dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/divider3"/>
