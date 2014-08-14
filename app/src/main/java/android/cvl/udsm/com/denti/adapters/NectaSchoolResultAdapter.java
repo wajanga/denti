@@ -62,9 +62,9 @@ public class NectaSchoolResultAdapter extends BaseAdapter {
 
         School school = getItem(position);
         schoolNameView.setText(school.getSchoolName());
-        schoolPassRateView.setText(school.getPassRate());
+        schoolPassRateView.setText(school.getSchoolResult().getPassRate());
         schoolNumberView.setText("Centre code: " + school.getSchoolNumber());
-        schoolRankView.setText("Rank: " + school.getRank());
+        schoolRankView.setText("Rank: " + school.getSchoolResult().getRank());
 
         return convertView;
     }

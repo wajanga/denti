@@ -2,6 +2,7 @@ package android.cvl.udsm.com.denti.activities;
 
 import android.app.Fragment;
 import android.cvl.udsm.com.denti.fragments.NectaStudentResultFragment;
+import android.cvl.udsm.com.denti.model.NectaResult;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.cvl.udsm.com.denti.R;
@@ -11,8 +12,8 @@ public class NectaStudentResultActivity extends SingleFragmentActivity {
     @Override
     protected Fragment createFragment() {
         //return new NectaResultFragment();
-        String studentNumber = getIntent().getStringExtra("studentNumber");
-        return NectaStudentResultFragment.newInstance(getIntent().getStringExtra("studentNumber"));
+        NectaResult nectaResult = getIntent().getParcelableExtra("necta_result");
+        return NectaStudentResultFragment.newInstance(nectaResult);
     }
 
     @Override

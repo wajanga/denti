@@ -23,17 +23,16 @@ import android.widget.TextView;
  */
 public class NectaStudentResultFragment extends Fragment {
 
-    private String studentNumber;
     private NectaResult result;
 
     public NectaStudentResultFragment() {
         // Required empty public constructor
     }
 
-    public static NectaStudentResultFragment newInstance(String studentNumber) {
+    public static NectaStudentResultFragment newInstance(NectaResult nectaResult) {
         NectaStudentResultFragment nectaResultFragment = new NectaStudentResultFragment();
         Bundle args = new Bundle();
-        args.putString("studentNumber", studentNumber);
+        args.putParcelable("necta_result", nectaResult);
         nectaResultFragment.setArguments(args);
         return nectaResultFragment;
     }
@@ -42,8 +41,7 @@ public class NectaStudentResultFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Get back arguments
-        studentNumber = getArguments().getString("studentNumber", "");
-        result = SampleData.getResult(studentNumber);
+        result = (NectaResult) getArguments().getParcelable("necta_result");
     }
 
     @Override

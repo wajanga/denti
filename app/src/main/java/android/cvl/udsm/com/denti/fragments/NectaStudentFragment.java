@@ -2,6 +2,8 @@ package android.cvl.udsm.com.denti.fragments;
 
 import android.content.Intent;
 import android.cvl.udsm.com.denti.activities.NectaStudentResultActivity;
+import android.cvl.udsm.com.denti.model.NectaResult;
+import android.cvl.udsm.com.denti.model.SampleData;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -36,8 +38,10 @@ public class NectaStudentFragment extends Fragment {
             public void onClick(View arg0) {
                 if (mStudentNumberEdittext.testValidity()) {
                     String mStudentNumber = mStudentNumberEdittext.getText().toString();
+                    NectaResult nectaResult = SampleData.getResult(mStudentNumber);
+
                     Intent intent = new Intent(getActivity(), NectaStudentResultActivity.class);
-                    intent.putExtra("studentNumber", mStudentNumber);
+                    intent.putExtra("necta_result", nectaResult);
                     startActivity(intent);
                 }
             }

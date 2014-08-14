@@ -18,10 +18,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.NectaActivity"
-            android:label="@string/title_activity_necta" >
-        </activity>
-        <activity
             android:name=".activities.HeslbActivity"
             android:label="@string/title_activity_heslb" >
         </activity>
@@ -34,7 +30,7 @@
             android:label="@string/title_activity_heslb_result" >
         </activity>
         <activity
-            android:name=".activities.NectaActivity2"
+            android:name=".activities.NectaActivity"
             android:label=""
             android:launchMode="singleTop" >
             <intent-filter>
