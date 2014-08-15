@@ -1,26 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Holo.Light">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_denti</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Denti</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Denti</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Denti</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Denti</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Denti</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_denti</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_denti</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Denti</item>
+        <item name="android:actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>
+
+    </style>
+
+    <style name="ActionBar.Solid.Denti" parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_solid_denti</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_denti</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_denti</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Denti</item>
+        <item name="android:titleTextStyle">@style/ActionBar.Solid.Denti.TitleTextStyle</item>
+    </style>
+
+    <style name="ActionBar.Solid.Denti.TitleTextStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="MyActionButtonOverflow" parent="android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_action_core_overflow</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Denti" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_denti</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Denti</item>
+    </style>
+
+    <style name="PopupMenu.Denti" parent="@android:style/Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_denti</item>	
+    </style>
+
+    <style name="DropDownListView.Denti" parent="@android:style/Widget.Holo.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_denti</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Denti" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_denti</item>
+    </style>
+
+    <style name="DropDownNav.Denti" parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_denti</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_denti</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_denti</item>
+    </style>
+    
+    <style name="ProgressBar.Denti" parent="@android:style/Widget.Holo.Light.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_denti</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Denti" parent="@android:style/Widget.Holo.Light.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_denti</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Denti.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Denti</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Denti</item>
     </style>
 
     <style name="Divider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
         <!-- <item name="android:background">?android:attr/listDivider</item> -->
-        <item name="android:background">@color/light_grey</item>
+        <item name="android:background">@color/light_grey1</item>
     </style>
 
     <style name="ListItem">
-        <item name="android:padding">10dp</item>
+        <item name="android:padding">5dp</item>
     </style>
 
     <style name="ListTextBold">
         <item name="android:textSize">17sp</item>
-        <item name="android:padding">5dp</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:textColor">@color/dark_grey</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ListText">
+        <item name="android:textSize">17sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="ListTextStyled">
+        <item name="android:textSize">17sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:textColor">@color/denti_theme</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ListTextSmall">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textColor">@color/light_grey2</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
     </style>
 
     <style name="TextViewBold">
@@ -30,36 +139,17 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="ListText">
-        <item name="android:textSize">17sp</item>
-        <item name="android:padding">5dp</item>
-        <item name="android:textColor">@color/black</item>
-    </style>
-
     <style name="TextView">
         <item name="android:textSize">17sp</item>
         <item name="android:padding">10dp</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="ListTextStyled">
-        <item name="android:textSize">17sp</item>
-        <item name="android:padding">5dp</item>
-        <item name="android:textColor">@color/dark_blue_theme</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
     <style name="TextViewStyled">
         <item name="android:textSize">17sp</item>
         <item name="android:padding">10dp</item>
-        <item name="android:textColor">@color/dark_blue_theme</item>
+        <item name="android:textColor">@color/denti_theme</item>
         <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="ListTextSmall">
-        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
-        <item name="android:textColor">#ff000000</item>
-        <item name="android:padding">5dp</item>
     </style>
 
 </resources>

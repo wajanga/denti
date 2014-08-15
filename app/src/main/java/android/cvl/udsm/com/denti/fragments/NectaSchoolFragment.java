@@ -110,9 +110,11 @@ public class NectaSchoolFragment extends Fragment implements AbsListView.OnItemC
     private void toggleFilterLayout() {
         if (filterLayout.getVisibility() == View.VISIBLE) {
             filterLayout.setVisibility(View.GONE);
+            mFilterTexview.setCompoundDrawablesWithIntrinsicBounds(0,0,R.drawable.ic_action_arrow_down,0);
         }
         else {
             filterLayout.setVisibility(View.VISIBLE);
+            mFilterTexview.setCompoundDrawablesWithIntrinsicBounds(0,0,R.drawable.ic_action_arrow_up,0);
         }
     }
 

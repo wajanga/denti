@@ -10,7 +10,7 @@
         android:layout_width="230dp"
         android:singleLine="true"
         android:layout_height="wrap_content"
-        style="@style/ListTextBold"
+        style="@style/ListTextStyled"
         android:ellipsize="end"
         android:text="Jangwani Secondary School"/>
 
@@ -34,7 +34,7 @@
         android:id="@+id/tvSchoolPassRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/ListTextStyled"
+        style="@style/ListTextSmall"
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         android:text="100%"/>

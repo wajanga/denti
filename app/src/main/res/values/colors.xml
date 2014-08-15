@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="light_grey">#e5e5e5</color>
+    <color name="light_grey1">#e5e5e5</color>
+    <color name="light_grey2">#7E7E7E</color>
+    <color name="light_grey3">#d3d3d3</color>
+    <color name="dark_grey">#252525</color>
     <color name="grey">#ccc</color>
     <color name="white">#fff</color>
     <color name="black">#000</color>
     <color name="green">#009900</color>
     <color name="dark_blue_theme">#2f6699</color>
+    <color name="denti_theme">#2EA1Ed</color>
 </resources>

@@ -39,7 +39,7 @@ public class NectaActivity extends Activity implements NectaSchoolFragment.OnFra
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_necta_activity2);
+        setContentView(R.layout.activity_necta_activity);
 
         // Get the intent, verify the action and get the query
         handleIntent(getIntent());

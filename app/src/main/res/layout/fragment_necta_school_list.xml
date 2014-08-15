@@ -9,6 +9,7 @@
         android:id="@+id/schoolList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <TextView
@@ -16,92 +17,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Form IV - 2014"
-            android:drawableRight="@android:drawable/arrow_down_float"
-            android:clickable="true"
-            android:padding="10dp"/>
+            android:drawableRight="@drawable/ic_action_arrow_down"
+            android:gravity="center_vertical"
+            style="@style/TextViewBold"
+            android:clickable="true"/>
 
-        <LinearLayout
-            android:id="@+id/filterLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone"
-            android:padding="10dp">
+        <View
+            android:id="@+id/divider"
+            style="@style/Divider" />
 
-            <TextView
-                android:id="@+id/header1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Level"/>
-            <View
-                android:id="@+id/divider1"
-                style="@style/Divider" />
-
-            <RadioGroup
-                android:id="@+id/rgLevel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/rbForm4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Form IV"
-                    android:checked="true"/>
-                <RadioButton
-                    android:id="@+id/rbForm6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Form VI"/>
-
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/header2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Year"/>
-            <View
-                android:id="@+id/divider2"
-                style="@style/Divider" />
-
-            <RadioGroup
-                android:id="@+id/rgYear"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/rbYear1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2011"/>
-                <RadioButton
-                    android:id="@+id/rbYear2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2012"/>
-                <RadioButton
-                    android:id="@+id/rbYear3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2013"/>
-                <RadioButton
-                    android:id="@+id/rbYear4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2014"
-                    android:checked="true"/>
-
-            </RadioGroup>
-
-        </LinearLayout>
+        <include layout="@layout/school_filter" />
 
         <ListView
             android:id="@android:id/list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:dividerHeight="8dp"
+            android:divider="@drawable/list_divider"/>
 
     </LinearLayout>
 

@@ -31,7 +31,7 @@
         </activity>
         <activity
             android:name=".activities.NectaActivity"
-            android:label=""
+            android:label="Necta Results"
             android:launchMode="singleTop" >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />

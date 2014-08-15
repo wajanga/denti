@@ -1,0 +1,85 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/filterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/header1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextViewBold"
+            android:text="Level"/>
+        <View
+            android:id="@+id/divider1"
+            style="@style/Divider" />
+
+        <RadioGroup
+            android:id="@+id/rgLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <RadioButton
+                android:id="@+id/rbForm4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Form IV"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/rbForm6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Form VI"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextViewBold"
+            android:text="Year"/>
+        <View
+            android:id="@+id/divider2"
+            style="@style/Divider" />
+
+        <RadioGroup
+            android:id="@+id/rgYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <RadioButton
+                android:id="@+id/rbYear1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2011"/>
+            <RadioButton
+                android:id="@+id/rbYear2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2012"/>
+            <RadioButton
+                android:id="@+id/rbYear3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2013"/>
+            <RadioButton
+                android:id="@+id/rbYear4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2014"
+                android:checked="true"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</merge>
