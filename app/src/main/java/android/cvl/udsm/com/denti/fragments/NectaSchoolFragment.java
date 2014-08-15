@@ -18,7 +18,10 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListAdapter;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.cvl.udsm.com.denti.R;
@@ -29,6 +32,10 @@ public class NectaSchoolFragment extends Fragment implements AbsListView.OnItemC
     private OnFragmentInteractionListener mListener;
     private AbsListView mListView;
     private NectaSchoolResultAdapter mAdapter;
+    private TextView mFilterTexview;
+    private LinearLayout filterLayout;
+    private RadioGroup rgLevel, rgYear;
+    private RadioButton rbLevel, rbYear;
 
     public NectaSchoolFragment() {
     }
@@ -52,10 +59,61 @@ public class NectaSchoolFragment extends Fragment implements AbsListView.OnItemC
         // Set OnItemClickListener so we can be notified on item clicks
         mListView.setOnItemClickListener(this);
 
+        filterLayout = (LinearLayout) view.findViewById(R.id.filterLayout);
+
+        rgLevel = (RadioGroup) view.findViewById(R.id.rgLevel);
+
+        rgYear = (RadioGroup) view.findViewById(R.id.rgYear);
+        rgYear.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                updateFilterTextview(i);
+            }
+        });
+
+        mFilterTexview = (TextView) view.findViewById(R.id.tvFilter);
+        mFilterTexview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateFilterTextview();
+                toggleFilterLayout();
+            }
+        });
+
         getActivity().getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         return view;
+    }
+
+    private void updateFilterTextview() {
+        if (filterLayout.getVisibility() == View.VISIBLE) {
+            int selectedLevelId = rgLevel.getCheckedRadioButtonId();
+            rbLevel = (RadioButton) getActivity().findViewById(selectedLevelId);
+
+            int selectedYearId = rgYear.getCheckedRadioButtonId();
+            rbYear = (RadioButton) getActivity().findViewById(selectedYearId);
+
+            mFilterTexview.setText(rbLevel.getText() + " - " + rbYear.getText());
+        }
+    }
+
+    private void updateFilterTextview(int viewId) {
+            int selectedLevelId = rgLevel.getCheckedRadioButtonId();
+            rbLevel = (RadioButton) getActivity().findViewById(selectedLevelId);
+
+            rbYear = (RadioButton) getActivity().findViewById(viewId);
+
+            mFilterTexview.setText(rbLevel.getText() + " - " + rbYear.getText());
+    }
+
+    private void toggleFilterLayout() {
+        if (filterLayout.getVisibility() == View.VISIBLE) {
+            filterLayout.setVisibility(View.GONE);
+        }
+        else {
+            filterLayout.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -87,8 +145,6 @@ public class NectaSchoolFragment extends Fragment implements AbsListView.OnItemC
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         if (null != mListener) {
-            // Notify the active callbacks interface (the activity, if the
-            // fragment is attached to one) that an item has been selected.
             mListener.onFragmentInteraction(SampleSchools.SCHOOLS.get(position).getSchoolNumber());
         }
     }
@@ -107,7 +163,6 @@ public class NectaSchoolFragment extends Fragment implements AbsListView.OnItemC
     }
 
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         public void onFragmentInteraction(String id);
     }
 
