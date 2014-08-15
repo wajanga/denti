@@ -3,29 +3,18 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_card"
-    android:layout_marginBottom="10dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
     android:padding="10dp">
-
-    <TextView
-        android:id="@+id/tvResultSummary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/TextViewBold"
-        android:text="Result Summary"/>
 
     <View
         android:id="@+id/divider2"
-        android:layout_below="@id/tvResultSummary"
-        style="@style/Divider" />
+        style="@style/Divider"
+        android:layout_marginBottom="10dp"/>
 
     <TextView
         android:id="@+id/tvCandidates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/TextViewStyled"
+        style="@style/TextViewBold"
         android:layout_below="@id/divider2"
         android:text="No. of candidates:"/>
 
@@ -42,7 +31,7 @@
         android:id="@+id/tvPassRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/TextViewStyled"
+        style="@style/TextViewBold"
         android:layout_below="@id/tvCandidates"
         android:text="Pass rate:"/>
 
@@ -60,7 +49,7 @@
         android:id="@+id/tvRank"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/TextViewStyled"
+        style="@style/TextViewBold"
         android:layout_below="@id/tvPassRate"
         android:text="Rank:"/>
 
@@ -75,87 +64,91 @@
 
     <TextView
         android:id="@+id/tvDiv1"
-        android:layout_width="match_parent"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        style="@style/TextViewStyled"
+        style="@style/TextViewBold"
         android:layout_below="@id/tvRank"
-        android:text="Division I:"/>
+        android:text="I:"/>
 
     <TextView
         android:id="@+id/tvDiv1Result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/TextView"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/tvRank"
+        android:layout_below="@id/tvDiv1"
+        android:layout_alignLeft="@id/tvDiv1"
         android:text="10"/>
 
     <TextView
         android:id="@+id/tvDiv2"
-        android:layout_width="match_parent"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        style="@style/TextViewStyled"
-        android:layout_below="@id/tvDiv1"
-        android:text="Division II:"/>
+        style="@style/TextViewBold"
+        android:layout_toRightOf="@id/tvDiv1"
+        android:layout_below="@id/tvRank"
+        android:text="II:"/>
 
     <TextView
         android:id="@+id/tvDiv2Result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/TextView"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/tvDiv1"
+        android:layout_below="@id/tvDiv2"
+        android:layout_alignLeft="@id/tvDiv2"
         android:text="10"/>
 
     <TextView
         android:id="@+id/tvDiv3"
-        android:layout_width="match_parent"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        style="@style/TextViewStyled"
-        android:layout_below="@id/tvDiv2"
-        android:text="Division III:"/>
+        style="@style/TextViewBold"
+        android:layout_toRightOf="@id/tvDiv2"
+        android:layout_below="@id/tvRank"
+        android:text="III:"/>
 
     <TextView
         android:id="@+id/tvDiv3Result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/TextView"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/tvDiv2"
+        android:layout_below="@id/tvDiv3"
+        android:layout_alignLeft="@id/tvDiv3"
         android:text="10"/>
 
     <TextView
         android:id="@+id/tvDiv4"
-        android:layout_width="match_parent"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        style="@style/TextViewStyled"
-        android:layout_below="@id/tvDiv3"
-        android:text="Division IV:"/>
+        style="@style/TextViewBold"
+        android:layout_toRightOf="@id/tvDiv3"
+        android:layout_below="@id/tvRank"
+        android:text="IV:"/>
 
     <TextView
         android:id="@+id/tvDiv4Result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/TextView"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/tvDiv3"
+        android:layout_below="@id/tvDiv4"
+        android:layout_alignLeft="@id/tvDiv4"
         android:text="10"/>
 
     <TextView
         android:id="@+id/tvDiv0"
-        android:layout_width="match_parent"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        style="@style/TextViewStyled"
-        android:layout_below="@id/tvDiv4"
-        android:text="Division 0:"/>
+        style="@style/TextViewBold"
+        android:layout_toRightOf="@id/tvDiv4"
+        android:layout_below="@id/tvRank"
+        android:text="0:"/>
 
     <TextView
         android:id="@+id/tvDiv0Result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/TextView"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/tvDiv4"
+        android:layout_below="@id/tvDiv0"
+        android:layout_alignLeft="@id/tvDiv0"
         android:text="10"/>
 
 </RelativeLayout>
