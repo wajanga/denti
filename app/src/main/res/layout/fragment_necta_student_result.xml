@@ -13,6 +13,8 @@
         android:gravity="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/empty_result"
+        android:background="@color/light_grey4"
+        android:textColor="@color/light_grey2"
         android:visibility="gone"/>
 
     <RelativeLayout
@@ -22,10 +24,43 @@
         android:padding="10dp">
 
         <TextView
+            android:id="@+id/tvStdNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextViewBold"
+            android:text="Student no:"/>
+
+        <TextView
+            android:id="@+id/tvStdNumberResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            style="@style/TextView"
+            android:text="S123"/>
+
+        <TextView
+            android:id="@+id/tvStdName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextViewBold"
+            android:layout_below="@id/tvStdNumber"
+            android:text="Name:"/>
+
+        <TextView
+            android:id="@+id/tvStdNameResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tvStdNumber"
+            style="@style/TextView"
+            android:text="Aron Kondoro"/>
+
+        <TextView
             android:id="@+id/tvDivision"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/TextViewBold"
+            android:layout_below="@id/tvStdName"
             android:text="@string/division"/>
 
         <TextView
@@ -33,6 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:layout_below="@id/tvStdName"
             style="@style/TextView"
             android:text="I"/>
 

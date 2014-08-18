@@ -17,7 +17,11 @@ import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.ChartData;
 import com.github.mikephil.charting.data.DataSet;
 import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.github.mikephil.charting.utils.XLabels;
+import com.github.mikephil.charting.utils.YLabels;
 
 import java.util.ArrayList;
 
@@ -38,70 +42,63 @@ public class NectaSchoolResultFragment extends Fragment {
         View v  = inflater.inflate(R.layout.fragment_necta_school_result, container, false);
 
         mChart = (LineChart) v.findViewById(R.id.chartResultHistory);
-        mChart.setDescription("");
-        mChart.setOffsets(0,20,20,20);
 
-        // Color template
-        mCt = new ColorTemplate();
-        mCt.addDataSetColor(R.color.colorful_1, getActivity());
-        mChart.setColorTemplate(mCt);
-
-        // Typeface
-        mTf = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Bold.ttf");
-        mChart.setYLabelTypeface(mTf);
-        mChart.setXLabelTypeface(mTf);
+        // apply styling
+        mTf = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Regular.ttf");
         mChart.setValueTypeface(mTf);
-        mChart.setAdjustXLabels(true);
-        mChart.setXLabelTextSize(20f);
-        mChart.setYLabelTextSize(20f);
-
-        // Number of y-values
-        mChart.setYLabelCount(5);
-
-        // Chart background
+        mChart.setDescription("");
         mChart.setDrawVerticalGrid(false);
         mChart.setDrawGridBackground(false);
 
-        // Line style
-        mChart.setLineWidth(3f);
-        mChart.setCircleSize(5f);
+        XLabels xl = mChart.getXLabels();
+        xl.setCenterXLabelText(true);
+        xl.setPosition(XLabels.XLabelPosition.BOTTOM);
+        xl.setTypeface(mTf);
 
-        // Chart borders
-        mChart.setDrawBorder(true);
-        mChart.setBorderStyles(new BarLineChartBase.BorderStyle[] { BarLineChartBase.BorderStyle.BOTTOM,
-                BarLineChartBase.BorderStyle.LEFT, BarLineChartBase.BorderStyle.RIGHT, BarLineChartBase.BorderStyle.TOP });
+        YLabels yl = mChart.getYLabels();
+        yl.setTypeface(mTf);
+        yl.setLabelCount(5);
 
-        setChartData(5, 100);
+        // set data
+        mChart.setData(generateDataLine(4));
 
+        // do not forget to refresh the chart
         mChart.invalidate();
 
         return v;
     }
 
-    private void setChartData(int count, float range) {
-        ArrayList<String> xVals = new ArrayList<String>();
-        xVals.add("2010");
-        xVals.add("2011");
-        xVals.add("2012");
-        xVals.add("2013");
-        xVals.add("2014");
+    private ChartData generateDataLine(int cnt) {
 
-        ArrayList<Entry> yVals = new ArrayList<Entry>();
+        ArrayList<Entry> e1 = new ArrayList<Entry>();
 
-        for (int i = 0; i < count; i++) {
-            float mult = (range + 1);
-            float val = (float) (Math.random() * mult) + 3;
-            yVals.add(new Entry(val, i));
+        for (int i = 0; i < 4; i++) {
+            e1.add(new Entry((int) (Math.random() * 65) + 40, i));
         }
 
-        DataSet set1 = new DataSet(yVals, "School Rank (Past 5 years)");
+        LineDataSet d = new LineDataSet(e1, "School Rank (Past 4 years)");
 
-        ArrayList<DataSet> dataSets = new ArrayList<DataSet>();
-        dataSets.add(set1);
+        d.setLineWidth(3f);
+        d.setCircleSize(5f);
+        d.setColor(getResources().getColor(R.color.denti_theme));
+        d.setCircleColor(getResources().getColor(R.color.denti_theme));
 
-        ChartData data = new ChartData(xVals, dataSets);
+        ArrayList<LineDataSet> sets = new ArrayList<LineDataSet>();
+        sets.add(d);
 
-        mChart.setData(data);
+        LineData cd = new LineData(getPreviousRanks(), sets);
+        return cd;
+    }
+
+    private ArrayList<String> getPreviousRanks() {
+
+        ArrayList<String> m = new ArrayList<String>();
+        m.add("2011");
+        m.add("2012");
+        m.add("2013");
+        m.add("2014");
+
+        return m;
     }
 
 }

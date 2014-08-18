@@ -15,8 +15,12 @@ import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.ChartData;
 import com.github.mikephil.charting.data.DataSet;
 import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.Legend;
+import com.github.mikephil.charting.utils.XLabels;
+import com.github.mikephil.charting.utils.YLabels;
 
 import java.util.ArrayList;
 
@@ -40,55 +44,58 @@ public class HeslbResultFragment extends Fragment {
         View v =  inflater.inflate(R.layout.fragment_heslb_result, container, false);
 
         mChart = (PieChart) v.findViewById(R.id.chartLoan);
+
+        // apply styling
+        Typeface mTf = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Regular.ttf");
+        mChart.setValueTypeface(mTf);
         mChart.setDescription("");
-
-        // chart colors
-        ColorTemplate ct = new ColorTemplate();
-        ct.addDataSetColors(ColorTemplate.COLORFUL_COLORS, getActivity());
-        mChart.setColorTemplate(ct);
-        // chart value colors
-        mChart.setValuePaintColor(getResources().getColor(R.color.black));
-
-        // type faces
-        Typeface tf = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Regular.ttf");
-        mChart.setValueTypeface(tf);
-        mChart.setCenterTextTypeface(Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Light.ttf"));
-
-        // display percentage values
+        mChart.setHoleRadius(60f);
+        mChart.setTransparentCircleRadius(65f);
+        mChart.setCenterText("Loan\nDistribution");
+        mChart.setCenterTextTypeface(mTf);
+        mChart.setCenterTextSize(18f);
+        mChart.setDrawXValues(false);
         mChart.setUsePercentValues(true);
 
-        mChart.setCenterText("Loan\nDistribution");
+        // set data
+        mChart.setData(generateDataPie(4));
 
-        // radius of the center hole in percent of maximum radius
-        mChart.setDrawHoleEnabled(true);
+        Legend l = mChart.getLegend();
+        l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
 
-        mChart.setData(generateLessData());
+        // do not forget to refresh the chart
+        mChart.invalidate();
 
         return v;
     }
 
-    protected ChartData generateLessData() {
+    private ChartData generateDataPie(int cnt) {
 
-        int count = 4;
+        ArrayList<Entry> entries = new ArrayList<Entry>();
 
-        ArrayList<Entry> entries1 = new ArrayList<Entry>();
-        ArrayList<String> xVals = new ArrayList<String>();
-
-        xVals.add("Tuition fee");
-        xVals.add("Accommodation");
-        xVals.add("Stipend");
-        xVals.add("Others");
-
-        for(int i = 0; i < count; i++) {
-            xVals.add("entry" + (i+1));
-
-            entries1.add(new Entry((float) (Math.random() * 100), i));
+        for (int i = 0; i < 4; i++) {
+            entries.add(new Entry((int) (Math.random() * 70) + 30, i));
         }
 
-        DataSet ds1 = new DataSet(entries1, "Categories");
+        PieDataSet d = new PieDataSet(entries, "");
 
-        ChartData d = new ChartData(xVals, ds1);
-        return d;
+        // space between slices
+        d.setSliceSpace(5f);
+        d.setColors(ColorTemplate.COLORFUL_COLORS, getActivity());
+
+        PieData cd = new PieData(getCategories(), d);
+        return cd;
+    }
+
+    private ArrayList<String> getCategories() {
+
+        ArrayList<String> q = new ArrayList<String>();
+        q.add("Tuition fee");
+        q.add("Accommodation");
+        q.add("Stipend");
+        q.add("Others");
+
+        return q;
     }
 
 

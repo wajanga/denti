@@ -82,7 +82,7 @@
     <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
     <orderEntry type="library" exported="" name="android-form-edittext-1.0.5" level="project" />
     <orderEntry type="library" exported="" name="support-v13-19.1.0" level="project" />
-    <orderEntry type="module" module-name="mPChartLib" exported="" />
+    <orderEntry type="module" module-name="MPChartLib" exported="" />
   </component>
 </module>
 

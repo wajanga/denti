@@ -2,29 +2,29 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/src/main/res" >
+        <source path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/res" >
             <file
                 name="ic_launcher"
-                path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/src/main/res/drawable-hdpi/ic_launcher.png"
+                path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/res/drawable-hdpi/ic_launcher.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/src/main/res/drawable-mdpi/ic_launcher.png"
+                path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/res/drawable-mdpi/ic_launcher.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/src/main/res/drawable-xhdpi/ic_launcher.png"
+                path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/res/drawable-xhdpi/ic_launcher.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/src/main/res/drawable-xxhdpi/ic_launcher.png"
+                path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/res/drawable-xxhdpi/ic_launcher.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
-                path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/src/main/res/values/colors.xml"
+                path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/res/values/colors.xml"
                 qualifiers="" >
                 <color name="greens_3" >#ACF960
                 </color>
@@ -108,7 +108,7 @@
                 </color>
             </file>
             <file
-                path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/src/main/res/values/dimens.xml"
+                path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/res/values/dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp
                 </dimen>
@@ -116,13 +116,13 @@
                 </dimen>
             </file>
             <file
-                path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/src/main/res/values/strings.xml"
+                path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/res/values/strings.xml"
                 qualifiers="" >
                 <string name="app_name" >MPChart
                 </string>
             </file>
             <file
-                path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/src/main/res/values/styles.xml"
+                path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/res/values/styles.xml"
                 qualifiers="" >
 
                 <style
@@ -144,13 +144,13 @@
                 </style>
             </file>
             <file
-                path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/src/main/res/values-sw720dp-land/dimens.xml"
+                path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/res/values-sw720dp-land/dimens.xml"
                 qualifiers="sw720dp-land-v13" >
                 <dimen name="activity_horizontal_margin" >128dp
                 </dimen>
             </file>
             <file
-                path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/src/main/res/values-v11/styles.xml"
+                path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/res/values-v11/styles.xml"
                 qualifiers="v11" >
 
                 <style
@@ -161,7 +161,7 @@
                 </style>
             </file>
             <file
-                path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/src/main/res/values-v14/styles.xml"
+                path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/res/values-v14/styles.xml"
                 qualifiers="v14" >
 
                 <style
@@ -172,11 +172,11 @@
                 </style>
             </file>
         </source>
-        <source path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/build/generated/res/rs/release" />
-        <source path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/build/generated/res/generated/release" />
+        <source path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/build/generated/res/rs/release" />
+        <source path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/build/generated/res/generated/release" />
     </dataSet>
     <dataSet config="release" >
-        <source path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/src/release/res" />
+        <source path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/src/release/res" />
     </dataSet>
 
 </merger>

@@ -61,6 +61,12 @@ public class NectaStudentResultFragment extends Fragment {
             emptyTextView.setVisibility(View.VISIBLE);
         }
         else {
+            TextView stdNoTextView = (TextView) view.findViewById(R.id.tvStdNumberResult);
+            stdNoTextView.setText(result.getStudentNumber());
+
+            TextView stdNameTextView = (TextView) view.findViewById(R.id.tvStdNameResult);
+            stdNameTextView.setText(result.getStudentName());
+
             TextView divisionTextView = (TextView) view.findViewById(R.id.tvDivisionResult);
             divisionTextView.setText(result.getDivision());
 

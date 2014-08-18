@@ -2,10 +2,10 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/src/main/assets" />
+        <source path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/assets" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="/Users/aronkondoro/AndroidStudioProjects/Denti/mPChartLib/src/debug/assets" />
+        <source path="/Users/aronkondoro/AndroidStudioProjects/Denti/MPChartLib/src/debug/assets" />
     </dataSet>
 
 </merger>

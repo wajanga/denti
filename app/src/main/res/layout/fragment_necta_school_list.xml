@@ -19,7 +19,8 @@
             android:text="Form IV - 2014"
             android:drawableRight="@drawable/ic_action_arrow_down"
             android:gravity="center_vertical"
-            style="@style/TextViewBold"
+            style="@style/TextViewStyled"
+            android:padding="10dp"
             android:clickable="true"/>
 
         <View
