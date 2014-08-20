@@ -19,14 +19,14 @@
         </activity>
         <activity
             android:name=".activities.HeslbActivity"
-            android:label="@string/title_activity_heslb" >
+            android:label="" >
         </activity>
         <activity
             android:name=".activities.NectaStudentResultActivity"
             android:label="@string/title_activity_necta_result" >
         </activity>
         <activity
-            android:name=".activities.HeslbResultActivity"
+            android:name=".activities.HeslbApplicantResultActivity"
             android:label="@string/title_activity_heslb_result" >
         </activity>
         <activity
@@ -44,6 +44,10 @@
         <activity
             android:name=".activities.NectaSchoolResultActivity"
             android:label="@string/title_activity_necta_school_result" >
+        </activity>
+        <activity
+            android:name=".activities.HeslbPayerResultActivity"
+            android:label="@string/title_activity_heslb_payer_result" >
         </activity>
     </application>
 

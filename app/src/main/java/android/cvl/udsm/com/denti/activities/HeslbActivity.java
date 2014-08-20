@@ -1,18 +1,36 @@
 package android.cvl.udsm.com.denti.activities;
 
-import android.app.Activity;
+import android.app.ActionBar;
 import android.app.Fragment;
-import android.cvl.udsm.com.denti.fragments.HeslbFragment;
+import android.cvl.udsm.com.denti.fragments.HeslbApplicantFragment;
+import android.cvl.udsm.com.denti.fragments.HeslbPayerFragment;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.cvl.udsm.com.denti.R;
+import android.widget.ArrayAdapter;
+import android.widget.SpinnerAdapter;
 
-public class HeslbActivity extends SingleFragmentActivity {
+public class HeslbActivity extends SingleFragmentActivity implements ActionBar.OnNavigationListener {
+
+    private boolean initialRun = true;
 
     @Override
     protected Fragment createFragment() {
-        return new HeslbFragment();
+        return new HeslbApplicantFragment();
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        final ActionBar actionBar = getActionBar();
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+
+        SpinnerAdapter mSpinnerAdapter = ArrayAdapter.createFromResource(this,
+                R.array.heslb_choice, android.R.layout.simple_spinner_dropdown_item);
+
+        actionBar.setListNavigationCallbacks(mSpinnerAdapter, this);
     }
 
     @Override
@@ -32,5 +50,24 @@ public class HeslbActivity extends SingleFragmentActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(int position, long id) {
+        if (initialRun) {
+            initialRun = false;
+        } else {
+            Fragment fragment = null;
+            switch (position) {
+                case 0:
+                    fragment = new HeslbApplicantFragment();
+                    break;
+                case 1:
+                    fragment = new HeslbPayerFragment();
+                    break;
+            }
+            replaceFragment(fragment);
+        }
+        return true;
     }
 }

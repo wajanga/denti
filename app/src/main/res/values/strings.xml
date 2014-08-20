@@ -38,4 +38,11 @@
     <string name="search_school_hint">Search School</string>
     <string name="title_activity_necta_school_result">School Result</string>
 
+    <string-array name="heslb_choice">
+        <item>Applicants</item>
+        <item>Payers</item>
+    </string-array>
+
+    <string name="title_activity_heslb_payer_result">Payer Summary</string>
+
 </resources>

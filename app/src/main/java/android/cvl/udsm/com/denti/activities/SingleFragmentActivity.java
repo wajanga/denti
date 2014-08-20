@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.cvl.udsm.com.denti.animation.ZoomOutPageTransformer;
+import android.view.inputmethod.InputMethodManager;
 
 
 public abstract class SingleFragmentActivity extends Activity {
@@ -37,6 +38,18 @@ public abstract class SingleFragmentActivity extends Activity {
                     .add(R.id.fragmentContainer, fragment)
                     .commit();
         }
+    }
+
+    public void replaceFragment(Fragment fragment) {
+        FragmentManager manager = getFragmentManager();
+
+        manager.beginTransaction()
+                .replace(R.id.fragmentContainer, fragment)
+                .commit();
+
+        // Hide the keyboard.
+        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
     }
 
 }
