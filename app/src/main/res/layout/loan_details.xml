@@ -1,0 +1,84 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/tvLoanDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black"
+            android:text="Loan Details"/>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_below="@id/tvLoanDetails"
+            style="@style/Divider" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_below="@id/divider2"
+            android:text="Status:"/>
+
+        <TextView
+            android:id="@+id/tvStatusResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:layout_below="@id/divider2"
+            android:background="@color/green"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:text="Accepted"/>
+
+        <TextView
+            android:id="@+id/tvGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_below="@id/tvStatus"
+            android:text="Grade:"/>
+
+        <TextView
+            android:id="@+id/tvGradeResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tvStatus"
+            android:text="A (80%)"/>
+
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_below="@id/tvGrade"
+            android:text="Amount:"/>
+
+        <TextView
+            android:id="@+id/tvAmountResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tvGrade"
+            android:text="2,000,000 Tshs"/>
+
+    </RelativeLayout>
+
+</merge>

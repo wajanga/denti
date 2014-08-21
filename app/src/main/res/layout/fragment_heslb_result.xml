@@ -1,163 +1,89 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_grey1"
-    android:orientation="vertical"
     tools:context=".fragments.HeslbResultFragment">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_margin="10dp"
-        android:background="@drawable/bg_card"
-        android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvPersonalDetails"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Personal Details"/>
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_card"
+            android:layout_height="wrap_content">
 
-        <View
-            android:id="@+id/divider"
-            android:layout_below="@id/tvPersonalDetails"
-            style="@style/Divider" />
+            <TextView
+                android:id="@+id/tvPersonalDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Personal Details"/>
 
-        <TextView
-            android:id="@+id/tvName"
+            <View
+                android:id="@+id/divider"
+                android:layout_below="@id/tvPersonalDetails"
+                style="@style/Divider" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_below="@+id/divider"
+                android:text="Name:"/>
+
+            <TextView
+                android:id="@+id/tvNameResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/divider"
+                android:text="Aron Kondoro"/>
+
+        </RelativeLayout>
+
+        <include layout="@layout/loan_details"/>
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_below="@+id/divider"
-            android:text="Name:"/>
+            android:layout_height="300dp"
+            android:background="@drawable/bg_card"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
-        <TextView
-            android:id="@+id/tvNameResult"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/divider"
-            android:text="Aron Kondoro"/>
+            <TextView
+                android:id="@+id/tvLoanAmtDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Loan Percentage Distribution"/>
 
-    </RelativeLayout>
+            <View
+                android:id="@+id/divider3"
+                android:layout_below="@id/tvLoanAmtDetails"
+                style="@style/Divider" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_card"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/chartLoan"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/divider3"/>
 
-        <TextView
-            android:id="@+id/tvLoanDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/black"
-            android:text="Loan Details"/>
+        </RelativeLayout>
 
-        <View
-            android:id="@+id/divider2"
-            android:layout_below="@id/tvLoanDetails"
-            style="@style/Divider" />
+    </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_below="@id/divider2"
-            android:text="Status:"/>
-
-        <TextView
-            android:id="@+id/tvStatusResult"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:textStyle="bold"
-            android:layout_margin="5dp"
-            android:layout_below="@id/divider2"
-            android:background="@color/green"
-            android:textColor="@color/white"
-            android:layout_alignParentRight="true"
-            android:text="Accepted"/>
-
-        <TextView
-            android:id="@+id/tvGrade"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_below="@id/tvStatus"
-            android:text="Grade:"/>
-
-        <TextView
-            android:id="@+id/tvGradeResult"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/tvStatus"
-            android:text="A"/>
-
-
-        <TextView
-            android:id="@+id/tvAmount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_below="@id/tvGrade"
-            android:text="Amount:"/>
-
-        <TextView
-            android:id="@+id/tvAmountResult"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/tvGrade"
-            android:text="2,000,000 Tshs"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_card"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
-
-        <TextView
-            android:id="@+id/tvLoanAmtDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Loan Percentage Distribution"/>
-
-        <View
-            android:id="@+id/divider3"
-            android:layout_below="@id/tvLoanAmtDetails"
-            style="@style/Divider" />
-
-        <com.github.mikephil.charting.charts.PieChart
-            android:id="@+id/chartLoan"
-            android:layout_width="wrap_content"
-            android:padding="10dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/divider3"/>
-
-    </RelativeLayout>
-
-</LinearLayout>
+</ScrollView>

@@ -5,6 +5,7 @@ package android.cvl.udsm.com.denti.fragments;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +18,11 @@ import com.github.mikephil.charting.data.DataSet;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.interfaces.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.github.mikephil.charting.utils.Highlight;
 import com.github.mikephil.charting.utils.Legend;
+import com.github.mikephil.charting.utils.MarkerView;
 import com.github.mikephil.charting.utils.XLabels;
 import com.github.mikephil.charting.utils.YLabels;
 
@@ -28,9 +32,10 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  *
  */
-public class HeslbResultFragment extends Fragment {
+public class HeslbResultFragment extends Fragment implements OnChartValueSelectedListener {
 
     private PieChart mChart;
+    private ArrayList<String> q = new ArrayList<String>();
 
     public HeslbResultFragment() {
         // Required empty public constructor
@@ -53,9 +58,13 @@ public class HeslbResultFragment extends Fragment {
         mChart.setTransparentCircleRadius(65f);
         mChart.setCenterText("Loan\nDistribution");
         mChart.setCenterTextTypeface(mTf);
-        mChart.setCenterTextSize(18f);
+        mChart.setCenterTextSize(16f);
         mChart.setDrawXValues(false);
         mChart.setUsePercentValues(true);
+        mChart.setCenterText("Total\n2,000,000 Tsh");
+
+        // add a selection listener
+        mChart.setOnChartValueSelectedListener(this);
 
         // set data
         mChart.setData(generateDataPie(4));
@@ -73,9 +82,13 @@ public class HeslbResultFragment extends Fragment {
 
         ArrayList<Entry> entries = new ArrayList<Entry>();
 
-        for (int i = 0; i < 4; i++) {
+        /*for (int i = 0; i < 4; i++) {
             entries.add(new Entry((int) (Math.random() * 70) + 30, i));
-        }
+        }*/
+        entries.add(new Entry(1100000, 0));
+        entries.add(new Entry(300000, 1));
+        entries.add(new Entry(300000, 2));
+        entries.add(new Entry(300000, 3));
 
         PieDataSet d = new PieDataSet(entries, "");
 
@@ -89,7 +102,7 @@ public class HeslbResultFragment extends Fragment {
 
     private ArrayList<String> getCategories() {
 
-        ArrayList<String> q = new ArrayList<String>();
+        //ArrayList<String> q = new ArrayList<String>();
         q.add("Tuition fee");
         q.add("Accommodation");
         q.add("Stipend");
@@ -99,4 +112,14 @@ public class HeslbResultFragment extends Fragment {
     }
 
 
+    @Override
+    public void onValuesSelected(Entry[] values, Highlight[] highlights) {
+        mChart.setCenterText(q.get(highlights[0].getXIndex()) + "\n" + values[0].getVal() + " Tshs");
+    }
+
+    @Override
+    public void onNothingSelected() {
+        //Log.i("PieChart", "nothing selected");
+        mChart.setCenterText("Total\n2,000,000 Tshs");
+    }
 }
