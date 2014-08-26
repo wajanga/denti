@@ -5,20 +5,55 @@
     android:gravity="center"
     tools:context=".fragments.HeslbChoiceFragment">
 
-    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
+        android:id="@+id/btnLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <RadioButton android:id="@+id/radioApplicants"
+        android:padding="10dp">
+
+        <ImageButton
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:id="@+id/imgBtnApplicant"
+            android:padding="5dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_applicant" />
+        <TextView
+            android:id="@+id/tvNecta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/imgBtnApplicant"
+            android:layout_centerHorizontal="true"
+            android:text="Applicants"
+            android:padding="10dp"
             android:textSize="20dp"
-            android:text="Applicants"/>
-        <RadioButton android:id="@+id/radioPayers"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageButton
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:id="@+id/imgBtnPayer"
+            android:padding="5dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_payer" />
+        <TextView
+            android:id="@+id/tvHeslb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/imgBtnPayer"
+            android:padding="10dp"
+            android:text="Payers"
             android:textSize="20dp"
-            android:text="Payers"/>
-    </RadioGroup>
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
 
 </LinearLayout>

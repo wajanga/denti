@@ -2,6 +2,9 @@ package android.cvl.udsm.com.denti.fragments;
 
 
 
+import android.content.Intent;
+import android.cvl.udsm.com.denti.activities.HeslbPayLoanActivity;
+import android.cvl.udsm.com.denti.activities.HeslbPayerResultActivity;
 import android.graphics.drawable.ClipDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
@@ -11,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.cvl.udsm.com.denti.R;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class HeslbResultFragment2 extends Fragment {
@@ -29,6 +33,14 @@ public class HeslbResultFragment2 extends Fragment {
         LayerDrawable layer = (LayerDrawable) imageview.getDrawable();
         ClipDrawable clip = (ClipDrawable) layer.findDrawableByLayerId(R.id.clip_fg);
         clip.setLevel(5000);
+
+        Button btnPay = (Button) v.findViewById(R.id.button);
+        btnPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                startActivity(new Intent(getActivity(), HeslbPayLoanActivity.class));
+            }
+        });
 
         return v;
     }

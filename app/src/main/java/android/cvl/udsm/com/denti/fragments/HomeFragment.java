@@ -2,6 +2,7 @@ package android.cvl.udsm.com.denti.fragments;
 
 import android.content.Intent;
 import android.cvl.udsm.com.denti.activities.HeslbActivity;
+import android.cvl.udsm.com.denti.activities.HeslbChoiceActivity;
 import android.cvl.udsm.com.denti.activities.NectaActivity;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -35,7 +36,7 @@ public class HomeFragment extends Fragment {
         mHeslbImgButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                startActivity(new Intent(getActivity(), HeslbActivity.class));
+                startActivity(new Intent(getActivity(), HeslbChoiceActivity.class));
             }
         });
 

@@ -1,7 +1,9 @@
 package android.cvl.udsm.com.denti.activities;
 
 import android.app.ActionBar;
+import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
 import android.cvl.udsm.com.denti.fragments.HeslbApplicantFragment;
 import android.cvl.udsm.com.denti.fragments.HeslbChoiceFragment;
 import android.cvl.udsm.com.denti.fragments.HeslbPayerFragment;
@@ -12,26 +14,16 @@ import android.cvl.udsm.com.denti.R;
 import android.widget.ArrayAdapter;
 import android.widget.SpinnerAdapter;
 
-public class HeslbActivity extends SingleFragmentActivity {
+public class HeslbChoiceActivity extends SingleFragmentActivity implements ActionBar.OnNavigationListener {
 
     private boolean initialRun = true;
-    public static final int FRAGMENT_APPLICANT = 0, FRAGMENT_PAYER = 1, FRAGMENT_NONE = -1;
-    public static final String FRAGMENT_TYPE = "fragment_type";
 
     @Override
     protected Fragment createFragment() {
-        int choice = getIntent().getIntExtra(FRAGMENT_TYPE, FRAGMENT_NONE);
-        switch (choice) {
-            case FRAGMENT_APPLICANT:
-                return new HeslbApplicantFragment();
-            case FRAGMENT_PAYER:
-                return new HeslbPayerFragment();
-            default:
-                return new HeslbApplicantFragment();
-        }
+        return new HeslbChoiceFragment();
     }
 
-    /*@Override
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -42,12 +34,12 @@ public class HeslbActivity extends SingleFragmentActivity {
                 R.array.heslb_choice, android.R.layout.simple_spinner_dropdown_item);
 
         actionBar.setListNavigationCallbacks(mSpinnerAdapter, this);
-    }*/
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.heslb, menu);
+        getMenuInflater().inflate(R.menu.heslb_choice, menu);
         return true;
     }
 
@@ -63,22 +55,22 @@ public class HeslbActivity extends SingleFragmentActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /*@Override
+    @Override
     public boolean onNavigationItemSelected(int position, long id) {
         if (initialRun) {
             initialRun = false;
         } else {
-            Fragment fragment = null;
+            Intent intent = new Intent(this, HeslbActivity.class);
             switch (position) {
                 case 0:
-                    fragment = new HeslbApplicantFragment();
+                    intent.putExtra(HeslbActivity.FRAGMENT_TYPE, HeslbActivity.FRAGMENT_APPLICANT);
                     break;
                 case 1:
-                    fragment = new HeslbPayerFragment();
+                    intent.putExtra(HeslbActivity.FRAGMENT_TYPE, HeslbActivity.FRAGMENT_PAYER);
                     break;
             }
-            replaceFragment(fragment);
+            startActivity(intent);
         }
         return true;
-    }*/
+    }
 }

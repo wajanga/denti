@@ -49,6 +49,14 @@
             android:name=".activities.HeslbPayerResultActivity"
             android:label="@string/title_activity_heslb_payer_result" >
         </activity>
+        <activity
+            android:name=".activities.HeslbPayLoanActivity"
+            android:label="@string/title_activity_heslb_pay_loan" >
+        </activity>
+        <activity
+            android:name=".activities.HeslbChoiceActivity"
+            android:label="" >
+        </activity>
     </application>
 
 </manifest>

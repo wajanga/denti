@@ -44,5 +44,7 @@
     </string-array>
 
     <string name="title_activity_heslb_payer_result">Payer Summary</string>
+    <string name="title_activity_heslb_pay_loan">Pay Loan</string>
+    <string name="title_activity_heslb_choice">Choose user type</string>
 
 </resources>
