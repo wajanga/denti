@@ -36,7 +36,7 @@ public class HeslbPayLoanFragment extends Fragment {
         });
 
         tvPayDetails = (TextView) v.findViewById(R.id.tvPaymentDetails);
-        tvPayDetails.setText("M-Pesa Instructions");
+        tvPayDetails.setText(getResources().getString(R.string.mpesa_pay_instructions));
 
         return v;
     }
@@ -44,10 +44,10 @@ public class HeslbPayLoanFragment extends Fragment {
     private void updatePaymentDescription(int viewId) {
         switch (viewId) {
             case R.id.radioMpesa:
-                tvPayDetails.setText("M-Pesa Instructions");
+                tvPayDetails.setText(getResources().getString(R.string.mpesa_pay_instructions));
                 break;
             case R.id.radioNmb:
-                tvPayDetails.setText("NMB Instructions");
+                tvPayDetails.setText(getResources().getString(R.string.nmb_pay_instructions));
                 break;
             default:
                 break;

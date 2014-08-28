@@ -37,6 +37,28 @@
     <string name="search_title">Search</string>
     <string name="search_school_hint">Search School</string>
     <string name="title_activity_necta_school_result">School Result</string>
+    <string name="mpesa_pay_instructions">1. To get MPESA Menu dial *150*00# (Piga *150*00#)\n\n
+                                          2. Choose option 4 for Pay by MPESA (Lipa kwa MPESA)\n\n
+                                          3. Choose option 3 for Choose Business (Chagua aina ya Biashara unayolipa)\n\n
+                                          4. Enter 8 for Education Services(Ingiza 8 kwa Huduma za Elimu)\n\n
+                                          5. Enter 2 for HESLB(Ingiza 2 kwa HESLB)\n\n
+                                          6. Enter reference number (Ingiza namba yako ya kumbukumbu), which is your formatted 15 character form 4 index number e.g. S0143.0012.2009\n\n
+                                          7. Enter the amount in Tshs to pay either 30,000 or 10,000 based on your application category\n\n
+                                          8. Enter your 4 digit PIN\n\n
+                                          9. Enter 1 to confirm\n\n
+                                          10. A confirmation Message will be displayed. N.B: Please keep this message privately\n\n
+    </string>
+    <string name="nmb_pay_instructions">1. Dial *150*00#\n\n
+                                        2. Select option 1: Send Money\n\n
+                                        3. Select option 3: Bank\n\n
+                                        4. Select option 2: NMB\n\n
+                                        5. Enter reference\n\n
+                                        6. Enter Account no\n\n
+                                        7. Enter amount\n\n
+                                        8. Enter PIN {M-PESA PIN}\n\n
+                                        9. Press 1 to confirm\n\n
+                                        10. Receive M-Pesa\n\n
+    </string>
 
     <string-array name="heslb_choice">
         <item>Applicants</item>

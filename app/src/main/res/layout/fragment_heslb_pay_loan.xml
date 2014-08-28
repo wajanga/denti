@@ -1,105 +1,110 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/light_grey1"
     tools:context="android.cvl.udsm.com.denti.fragments.HeslbPayLoanFragment">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_margin="10dp"
-        android:background="@drawable/bg_card"
-        android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvPaymentMethod"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Payment Method"/>
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_card"
+            android:layout_height="wrap_content">
 
-        <View
-            android:id="@+id/divider1"
-            android:layout_below="@id/tvPaymentMethod"
-            style="@style/Divider" />
+            <TextView
+                android:id="@+id/tvPaymentMethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Payment Method"/>
 
-        <RadioGroup android:id="@+id/radioGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/divider1"
-            android:orientation="horizontal">
+            <View
+                android:id="@+id/divider1"
+                android:layout_below="@id/tvPaymentMethod"
+                style="@style/Divider" />
 
-            <RadioButton android:id="@+id/radioMpesa"
+            <RadioGroup android:id="@+id/radioGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
-                android:drawableRight="@drawable/ic_mpesa"/>
+                android:layout_below="@id/divider1"
+                android:orientation="horizontal">
 
-            <RadioButton android:id="@+id/radioNmb"
+                <RadioButton android:id="@+id/radioMpesa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:drawableRight="@drawable/ic_mpesa"/>
+
+                <RadioButton android:id="@+id/radioNmb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_nmb"/>
+
+            </RadioGroup>
+
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableRight="@drawable/ic_nmb"/>
+                android:id="@+id/imageButton1"
+                android:layout_margin="5dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_mpesa"
+                android:visibility="gone"
+                android:layout_below="@id/divider1"/>
 
-        </RadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton2"
+                android:layout_toRightOf="@id/imageButton1"
+                android:layout_margin="5dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_nmb"
+                android:visibility="gone"
+                android:layout_below="@id/divider1"/>
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton1"
-            android:layout_margin="5dp"
-            android:background="@color/white"
-            android:src="@drawable/ic_mpesa"
-            android:visibility="gone"
-            android:layout_below="@id/divider1"/>
+        </RelativeLayout>
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton2"
-            android:layout_toRightOf="@id/imageButton1"
-            android:layout_margin="5dp"
-            android:background="@color/white"
-            android:src="@drawable/ic_nmb"
-            android:visibility="gone"
-            android:layout_below="@id/divider1"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/bg_card"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/tvPaymentProcedure"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Procedure"/>
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_card"
+            android:layout_height="wrap_content">
 
-        <View
-            android:id="@+id/divider2"
-            android:layout_below="@id/tvPaymentProcedure"
-            style="@style/Divider" />
+            <TextView
+                android:id="@+id/tvPaymentProcedure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Procedure"/>
 
-        <TextView
-            android:id="@+id/tvPaymentDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_below="@id/divider2"
-            android:text="Payment Procedure"/>
+            <View
+                android:id="@+id/divider2"
+                android:layout_below="@id/tvPaymentProcedure"
+                style="@style/Divider" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/tvPaymentDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_below="@id/divider2"
+                android:text="@string/mpesa_pay_instructions"/>
 
-</LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
